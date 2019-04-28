@@ -7,14 +7,20 @@
         <meta name="keywords" content="HTML, CSS, JavaScript, AngularJS">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body background="src/header/image.jpg">
+    <body background="src/home/image.jpg">
 
-        <div class = "header" ng-app="headerModule" ng-controller="myHeaderController" ng-strict-di>
-            <my-header-directive></my-header-directive>
+        <div class='home' ng-app='homeModule' ng-strict-di>
+            <div class='header' ng-controller='myHeaderController'>
+                <my-home-header-directive></my-header-directive>
+            </div>
+            <div class='footer' ng-controller='myFooterController'>
+                <my-home-footer-directive></my-footer-directive>
+            </div>
+
         </div>
 
         <script src="../node_modules/angular/angular.js"></script>
-        <script src="src/header/header.module.js"></script>
+        <script src="src/home/home.component.js"></script>
 
     </body>
 </html>
